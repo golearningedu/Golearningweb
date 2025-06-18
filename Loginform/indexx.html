@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রেজিস্টার</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ <script  type="module"    src="firebaseauth.js"></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="container" id="signup" style="display:none;">
+            <div class="form-header">
+                <div class="logo-text">Go Learning</div>
+                <h1 class="form-title">নতুন অ্যাকাউন্ট তৈরি করো</h1>
+            </div>
+            <form method="post" action="">
+                <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fName" placeholder="প্রথম নাম" required>
+                    <label for="fname">প্রথম নাম</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="lName" placeholder="শেষ নাম" required>
+                    <label for="lName">শেষ নাম</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="rEmail" placeholder="ইমেইল" required>
+                    <label for="rEmail">ইমেইল</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="rPassword" placeholder="পাসওয়ার্ড" required>
+                    <label for="rPassword">পাসওয়ার্ড</label>
+                </div>
+                <button class="btn primary-btn" id="submitSignUp">অ্যাকাউন্ট তৈরি করো</button>
+            </form>
+            <div class="auth-footer">
+                <p>তোমার অ্যাকাউন্ট আছে?</p>
+                <button id="signInButton" class="text-btn">লগইন করো</button>
+            </div>
+        </div>
+
+        <div class="container" id="signIn">
+            <div class="form-header">
+                <div class="logo-text">Go Learning</div>
+                <h1 class="form-title">লগইন করো </h1>
+            </div>
+            <form method="post" action="">
+                <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="ইমেইল" required>
+                    <label for="email">ইমেইল</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="পাসওয়ার্ড" required>
+                    <label for="password">পাসওয়ার্ড</label>
+                </div>
+                <div class="form-options">
+                    <a href="#" class="forgot-password">পাসওয়ার্ড ভুলে গিয়েছো?</a>
+                </div>
+                <button class="btn primary-btn" id="submitSignIn">প্রবেশ করো</button>
+            </form>
+            <div class="auth-footer">
+                <p>তোমার কোনো অ্যাকাউন্ট নেই?</p>
+                <button id="signUpButton" class="text-btn">অ্যাকাউন্ট তৈরি করো</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+  </html>
